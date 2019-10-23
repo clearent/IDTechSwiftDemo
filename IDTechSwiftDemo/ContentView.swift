@@ -9,8 +9,35 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var amount: String = "1.00"
+    
+    @State private var feedback: String = ""
+    
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("IDTech Swift Demo")
+                .fontWeight(.semibold)
+    
+            TextField("Enter amount", text: $amount)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            Button(action:
+                {
+                    print(self.amount)
+            }) {
+                HStack {
+                    Text("Pay")
+                }
+            }
+        
+            Spacer()
+            
+            TextField("Results", text: $feedback)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(Color.gray)
+        }
     }
 }
 

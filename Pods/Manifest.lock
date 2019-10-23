@@ -1,0 +1,16 @@
+PODS:
+  - ClearentIdtechIOSFrameworkPod (1.0.84)
+
+DEPENDENCIES:
+  - ClearentIdtechIOSFrameworkPod (= 1.0.84)
+
+SPEC REPOS:
+  https://github.com/clearent/CocoaPods.git:
+    - ClearentIdtechIOSFrameworkPod
+
+SPEC CHECKSUMS:
+  ClearentIdtechIOSFrameworkPod: 45dbb863d7419319801d79648f5d6e9d8b16798d
+
+PODFILE CHECKSUM: 041aa5d2d5f4dbc58e6d937d8f9d76af8b82b048
+
+COCOAPODS: 1.8.4

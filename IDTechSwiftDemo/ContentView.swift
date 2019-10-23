@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var processing = false
     @State private var amount: String = "1.00"
     
     @State private var feedback: String = ""
@@ -23,13 +25,14 @@ struct ContentView: View {
                 .padding()
             Button(action:
                 {
-                    print(self.amount)
+                    self.feedback = self.feedback + "Processing\n"
+                    self.processing = true
             }) {
                 HStack {
                     Text("Pay")
                 }
-            }
-        
+            }.disabled(self.processing)
+            
             Spacer()
             
             TextField("Results", text: $feedback)

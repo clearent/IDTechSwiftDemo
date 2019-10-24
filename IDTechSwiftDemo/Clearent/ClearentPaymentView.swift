@@ -18,7 +18,7 @@ struct ClearentPaymentView: View {
     init(_ baseUrl: String, _ publicKey: String) {
         contentViewModel = ContentViewModel()
         self.clearentPayment = ClearentPayment(contentViewModel: contentViewModel, baseUrl:baseUrl, publicKey:publicKey)
-        self.clearentBluetoothScanner = ClearentBluetoothScanner(clearentPaymentView: self)
+        self.clearentBluetoothScanner = ClearentBluetoothScanner(lookForFriendlyName: contentViewModel.deviceSerialNumber, clearentPayment:self.clearentPayment)
     }
     
     var body: some View {
@@ -27,9 +27,25 @@ struct ClearentPaymentView: View {
             Text("IDTech Swift Demo")
                 .fontWeight(.semibold)
             
-            TextField("Enter amount", text: $contentViewModel.amount)
+            HStack{
+                Text("Amount")
+                    .fontWeight(.medium)
+        
+                TextField("Enter amount", text: $contentViewModel.amount)
+                    .frame(width: 100.0, height: 50.0, alignment: .center)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+            }
+            
+            HStack{
+                Text("Device Serial Number")
+                        .fontWeight(.medium)
+                
+                TextField("Enter device serial number", text: $contentViewModel.deviceSerialNumber)
+                .frame(width: 250.0, height: 50.0, alignment: .center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+            
+            }
             
             HStack{
                 Button(action:
@@ -89,12 +105,14 @@ struct ClearentPaymentView: View {
             }.disabled(contentViewModel.processing || !contentViewModel.bluetoothConnected)
             
             Spacer()
-            
-            TextField("Results", text: $contentViewModel.feedback)
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .background(Color.gray)
+            List{
+                Text(contentViewModel.feedback).lineLimit(100).padding(20)
+//                TextField("Results", text: $contentViewModel.feedback)
+//                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+//                    .font(.largeTitle)
+//                    .foregroundColor(.white)
+//                    .background(Color.gray)
+            }
         }
     }
     
@@ -135,6 +153,8 @@ struct ClearentPaymentView_Previews: PreviewProvider {
 final class ContentViewModel: ObservableObject {
     @Published var processing = false
     @Published var amount = "1.00"
+    @Published var deviceSerialNumber = "IDTECH-VP3300-03826"
     @Published var bluetoothConnected = false
     @Published var feedback = ""
 }
+

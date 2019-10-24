@@ -38,7 +38,7 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
     
     func isReady() {
         print("isReady")
-        contentViewModel.feedback.append(contentsOf: "Reader is Ready")
+        contentViewModel.feedback.append(contentsOf: "Reader is Ready\n")
         contentViewModel.bluetoothConnected = true
     }
     
@@ -57,13 +57,13 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
     
     func deviceDisconnected() {
         print("DEVICE IS DISCONNECTED")
-        contentViewModel.feedback.append(contentsOf: "Reader is disconnected")
+        contentViewModel.feedback.append(contentsOf: "Reader is disconnected\n")
         contentViewModel.bluetoothConnected = false
     }
     
     func deviceMessage(_ message: String!) {
         print("DEVICE MESSAGE: \(message!)")
-        contentViewModel.feedback.append(contentsOf: message)
+        contentViewModel.feedback.append(contentsOf: message + "\n")
     }
     
     func data(inOutMonitor data: Data?, incoming isIncoming: Bool) {
@@ -78,21 +78,21 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
                 print("LCD: \(line)")
                 switch line {
                 case "SWIPE OR INSERT", "INSERT/SWIPE":
-                    contentViewModel.feedback.append(contentsOf: line)
+                    contentViewModel.feedback.append(contentsOf: line + "\n")
                 case "PROCESSING…":
-                   contentViewModel.feedback.append(contentsOf: line)
+                   contentViewModel.feedback.append(contentsOf: line + "\n")
                 case "GO ONLINE", "AUTHORIZING…":
-                   contentViewModel.feedback.append(contentsOf: line)
+                   contentViewModel.feedback.append(contentsOf: line + "\n")
                 case "USE CHIP READER":
-                    contentViewModel.feedback.append(contentsOf: line)
+                    contentViewModel.feedback.append(contentsOf: line + "\n")
                 case "USE MAGSTRIPE":
-                    contentViewModel.feedback.append(contentsOf: line)
+                    contentViewModel.feedback.append(contentsOf: line + "\n")
                 case "TIME OUT", "TIMEOUT":
-                    contentViewModel.feedback.append(contentsOf: line)
+                    contentViewModel.feedback.append(contentsOf: line + "\n")
                 case "TERMINATED":
-                    contentViewModel.feedback.append(contentsOf: line)
+                    contentViewModel.feedback.append(contentsOf: line + "\n")
                 default:
-                    contentViewModel.feedback.append(contentsOf: "Unhandled LCD message " + line)
+                   // contentViewModel.feedback.append(contentsOf: "Unhandled LCD message " + line)
                     return
                 }
             }

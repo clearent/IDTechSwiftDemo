@@ -22,11 +22,13 @@ class ClearentBluetoothScanner: NSObject, CBCentralManagerDelegate {
     var manager: CBCentralManager!
     var peripherals: [CBPeripheral] = []
     var peripheralLocalNames: [String] = []
-    var clearentPaymentView: ClearentPaymentView!
+    var lookForFriendlyName: String
+    var  clearentPayment:ClearentPayment
    
-    init(clearentPaymentView:ClearentPaymentView) {
+    init(lookForFriendlyName:String,  clearentPayment:ClearentPayment) {
+        self.lookForFriendlyName = lookForFriendlyName
+        self.clearentPayment = clearentPayment
         super.init()
-        self.clearentPaymentView = clearentPaymentView
         manager = CBCentralManager(delegate: self, queue: nil)
     }
     
@@ -44,12 +46,12 @@ class ClearentBluetoothScanner: NSObject, CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if !peripherals.contains(peripheral) {
             if let localName = advertisementData[CBAdvertisementDataLocalNameKey] as? String {
-                if localName.contains("IDTECH-VP3300-03826") {
+                if localName.contains(lookForFriendlyName) {
                     peripherals.append(peripheral)
                     print(localName)
                     print(peripheral)
                     peripheralLocalNames.append(localName)
-                    clearentPaymentView.notifyBluetoothDevice(friendlyName:localName,uuid: peripheral.identifier)
+                    clearentPayment.addBluetoothDevice(friendlyName: localName, uuid: peripheral.identifier)
                 }
             }
         }

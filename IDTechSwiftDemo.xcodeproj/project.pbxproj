@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27D871610777F29E4278F09E /* Pods_IDTechSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F6FF2CDA02CF0395564528 /* Pods_IDTechSwiftDemo.framework */; };
 		4BB3EB332360889700375579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB322360889700375579 /* AppDelegate.swift */; };
 		4BB3EB352360889700375579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB342360889700375579 /* SceneDelegate.swift */; };
-		4BB3EB372360889700375579 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB362360889700375579 /* ContentView.swift */; };
 		4BB3EB392360889900375579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3EB382360889900375579 /* Assets.xcassets */; };
 		4BB3EB3C2360889900375579 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3EB3B2360889900375579 /* Preview Assets.xcassets */; };
 		4BB3EB3F2360889900375579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3EB3D2360889900375579 /* LaunchScreen.storyboard */; };
-		4BB3EB4A2360889900375579 /* IDTechSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB492360889900375579 /* IDTechSwiftDemoTests.swift */; };
-		4BB3EB552360889900375579 /* IDTechSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB542360889900375579 /* IDTechSwiftDemoUITests.swift */; };
-		B0B1C18AE9442EF51922C994 /* Pods_IDTechSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23234E9C7890E2908023EA13 /* Pods_IDTechSwiftDemo.framework */; };
+		4BB3EB6323612A3F00375579 /* ClearentPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */; };
+		4BB3EB6823612D9500375579 /* ClearentPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB6723612D9500375579 /* ClearentPayment.swift */; };
+		4BD37E6623614DB800FF2803 /* ClearentBluetoothScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,23 +36,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23234E9C7890E2908023EA13 /* Pods_IDTechSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDTechSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30E38760ABA86C099C929A3C /* Pods-IDTechSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		226C34AA91E6E0CDB31184BB /* Pods-IDTechSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4BB3EB2F2360889700375579 /* IDTechSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDTechSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB3EB322360889700375579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB3EB342360889700375579 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BB3EB362360889700375579 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4BB3EB382360889900375579 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BB3EB3B2360889900375579 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BB3EB3E2360889900375579 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BB3EB402360889900375579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB3EB452360889900375579 /* IDTechSwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDTechSwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BB3EB492360889900375579 /* IDTechSwiftDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTechSwiftDemoTests.swift; sourceTree = "<group>"; };
 		4BB3EB4B2360889900375579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB3EB502360889900375579 /* IDTechSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDTechSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BB3EB542360889900375579 /* IDTechSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTechSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		4BB3EB562360889900375579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2AF41715B4B15850EFA512E /* Pods-IDTechSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPaymentView.swift; sourceTree = "<group>"; };
+		4BB3EB6723612D9500375579 /* ClearentPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPayment.swift; sourceTree = "<group>"; };
+		4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentBluetoothScanner.swift; sourceTree = "<group>"; };
+		5B8BAF435FF49564CD09AF80 /* Pods-IDTechSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E2F6FF2CDA02CF0395564528 /* Pods_IDTechSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDTechSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0B1C18AE9442EF51922C994 /* Pods_IDTechSwiftDemo.framework in Frameworks */,
+				27D871610777F29E4278F09E /* Pods_IDTechSwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15695F5E563E0847C41695BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2F6FF2CDA02CF0395564528 /* Pods_IDTechSwiftDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4BB3EB262360889700375579 = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +97,7 @@
 				4BB3EB532360889900375579 /* IDTechSwiftDemoUITests */,
 				4BB3EB302360889700375579 /* Products */,
 				840EADD360CB5AB43AD0B791 /* Pods */,
-				E95C25F4D49E9DD75E57BCAC /* Frameworks */,
+				15695F5E563E0847C41695BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +114,9 @@
 		4BB3EB312360889700375579 /* IDTechSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4BB3EB6423612B9300375579 /* Clearent */,
 				4BB3EB322360889700375579 /* AppDelegate.swift */,
 				4BB3EB342360889700375579 /* SceneDelegate.swift */,
-				4BB3EB362360889700375579 /* ContentView.swift */,
 				4BB3EB382360889900375579 /* Assets.xcassets */,
 				4BB3EB3D2360889900375579 /* LaunchScreen.storyboard */,
 				4BB3EB402360889900375579 /* Info.plist */,
@@ -128,7 +136,6 @@
 		4BB3EB482360889900375579 /* IDTechSwiftDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				4BB3EB492360889900375579 /* IDTechSwiftDemoTests.swift */,
 				4BB3EB4B2360889900375579 /* Info.plist */,
 			);
 			path = IDTechSwiftDemoTests;
@@ -137,27 +144,28 @@
 		4BB3EB532360889900375579 /* IDTechSwiftDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4BB3EB542360889900375579 /* IDTechSwiftDemoUITests.swift */,
 				4BB3EB562360889900375579 /* Info.plist */,
 			);
 			path = IDTechSwiftDemoUITests;
 			sourceTree = "<group>";
 		};
+		4BB3EB6423612B9300375579 /* Clearent */ = {
+			isa = PBXGroup;
+			children = (
+				4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */,
+				4BB3EB6723612D9500375579 /* ClearentPayment.swift */,
+				4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */,
+			);
+			path = Clearent;
+			sourceTree = "<group>";
+		};
 		840EADD360CB5AB43AD0B791 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				30E38760ABA86C099C929A3C /* Pods-IDTechSwiftDemo.debug.xcconfig */,
-				C2AF41715B4B15850EFA512E /* Pods-IDTechSwiftDemo.release.xcconfig */,
+				5B8BAF435FF49564CD09AF80 /* Pods-IDTechSwiftDemo.debug.xcconfig */,
+				226C34AA91E6E0CDB31184BB /* Pods-IDTechSwiftDemo.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		E95C25F4D49E9DD75E57BCAC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				23234E9C7890E2908023EA13 /* Pods_IDTechSwiftDemo.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,12 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB3EB592360889900375579 /* Build configuration list for PBXNativeTarget "IDTechSwiftDemo" */;
 			buildPhases = (
-				42569B3C47452F75DA0294CE /* [CP] Check Pods Manifest.lock */,
+				BBA10A1AC3F9857E6F9CF2B9 /* [CP] Check Pods Manifest.lock */,
 				4BB3EB2B2360889700375579 /* Sources */,
 				4BB3EB2C2360889700375579 /* Frameworks */,
 				4BB3EB2D2360889700375579 /* Resources */,
-				BA38F6902801D5E635ADDDA2 /* [CP] Embed Pods Frameworks */,
-				95FA0904BE4A0CEC2E10E670 /* [CP] Copy Pods Resources */,
+				12A0C631FBFC6144911BD5CD /* [CP] Embed Pods Frameworks */,
+				9359041BF6558109368E9141 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,7 +298,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42569B3C47452F75DA0294CE /* [CP] Check Pods Manifest.lock */ = {
+		12A0C631FBFC6144911BD5CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9359041BF6558109368E9141 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA10A1AC3F9857E6F9CF2B9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -312,40 +354,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		95FA0904BE4A0CEC2E10E670 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA38F6902801D5E635ADDDA2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -355,7 +363,9 @@
 			files = (
 				4BB3EB332360889700375579 /* AppDelegate.swift in Sources */,
 				4BB3EB352360889700375579 /* SceneDelegate.swift in Sources */,
-				4BB3EB372360889700375579 /* ContentView.swift in Sources */,
+				4BB3EB6823612D9500375579 /* ClearentPayment.swift in Sources */,
+				4BD37E6623614DB800FF2803 /* ClearentBluetoothScanner.swift in Sources */,
+				4BB3EB6323612A3F00375579 /* ClearentPaymentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB3EB4A2360889900375579 /* IDTechSwiftDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +380,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BB3EB552360889900375579 /* IDTechSwiftDemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,11 +526,12 @@
 		};
 		4BB3EB5A2360889900375579 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30E38760ABA86C099C929A3C /* Pods-IDTechSwiftDemo.debug.xcconfig */;
+			baseConfigurationReference = 5B8BAF435FF49564CD09AF80 /* Pods-IDTechSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IDTechSwiftDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = PY4645385H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IDTechSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -538,11 +547,12 @@
 		};
 		4BB3EB5B2360889900375579 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2AF41715B4B15850EFA512E /* Pods-IDTechSwiftDemo.release.xcconfig */;
+			baseConfigurationReference = 226C34AA91E6E0CDB31184BB /* Pods-IDTechSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IDTechSwiftDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = PY4645385H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IDTechSwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

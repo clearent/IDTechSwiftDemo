@@ -99,4 +99,17 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
         }
     }
     
+    func startTransaction() {
+        clearentVP3300.emv_disableAutoAuthenticateTransaction(false)
+        let amount = Double(contentViewModel.amount)!
+        let rt:RETURN_CODE = clearentVP3300.emv_startTransaction(amount, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
+        //            let rt:RETURN_CODE = clearentVP3300.device_startTransaction(0, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
+        if RETURN_CODE_DO_SUCCESS == rt {
+            contentViewModel.feedback.append(contentsOf: "Transaction Successfully Started")
+        } else {
+            print("Start Transaction info \(rt)")
+            contentViewModel.feedback.append(contentsOf: "Transaction Failed to Start")
+        }
+    }
+    
 }

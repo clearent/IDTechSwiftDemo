@@ -121,7 +121,7 @@ struct ClearentPaymentView: View {
     }
 
     func startTransaction() {
-        
+        clearentPayment.startTransaction()
     }
 }
 

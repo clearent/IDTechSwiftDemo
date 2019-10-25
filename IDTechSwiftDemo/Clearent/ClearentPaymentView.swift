@@ -26,7 +26,7 @@ struct ClearentPaymentView: View {
         VStack {
             Text("IDTech Swift Demo")
                 .fontWeight(.semibold)
-            
+        
             HStack{
                 Text("Amount")
                     .fontWeight(.medium)

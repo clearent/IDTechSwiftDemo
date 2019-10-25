@@ -45,6 +45,7 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
     func successfulTransactionToken(_ jsonString: String!) {
         print("successfulTransactionToken")
         contentViewModel.feedback.append(contentsOf: jsonString)
+        contentViewModel.processing = false;
     }
     
     func plugStatusChange(_ deviceInserted: Bool) {

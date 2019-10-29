@@ -21,7 +21,7 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
     }
 
     func initializeClearentVP3300( baseUrl:String, publicKey:String) {
-        clearentVP3300.`init`(self, clearentBaseUrl: baseUrl, publicKey: publicKey)
+        type(of: clearentVP3300).init(self, clearentBaseUrl: baseUrl, publicKey: publicKey)
         clearentVP3300.setAutoConfiguration(false)
         print("clearentVP3300 has been initialized")
     }
@@ -100,17 +100,32 @@ class ClearentPayment: NSObject, ClearentManualEntryDelegate, Clearent_Public_ID
         }
     }
     
+//    func startTransaction() {
+//        clearentVP3300.emv_disableAutoAuthenticateTransaction(false)
+//        let amount = Double(contentViewModel.amount)!
+//        let rt:RETURN_CODE = clearentVP3300.emv_startTransaction(amount, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
+//        //            let rt:RETURN_CODE = clearentVP3300.device_startTransaction(0, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
+//        if RETURN_CODE_DO_SUCCESS == rt {
+//            contentViewModel.feedback.append(contentsOf: "Transaction Successfully Started")
+//        } else {
+//            print("Start Transaction info \(rt)")
+//            contentViewModel.feedback.append(contentsOf: "Transaction Failed to Start")
+//        }
+//    }
+   
     func startTransaction() {
-        clearentVP3300.emv_disableAutoAuthenticateTransaction(false)
-        let amount = Double(contentViewModel.amount)!
-        let rt:RETURN_CODE = clearentVP3300.emv_startTransaction(amount, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
-        //            let rt:RETURN_CODE = clearentVP3300.device_startTransaction(0, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
-        if RETURN_CODE_DO_SUCCESS == rt {
-            contentViewModel.feedback.append(contentsOf: "Transaction Successfully Started")
-        } else {
-            print("Start Transaction info \(rt)")
-            contentViewModel.feedback.append(contentsOf: "Transaction Failed to Start")
+        DispatchQueue.global(qos: .background).async {  [weak self] in
+            self?.clearentVP3300.emv_disableAutoAuthenticateTransaction(false)
+           // let amount = Double(self?.contentViewModel.amount)!
+            let amount = Double(self!.contentViewModel.amount)!
+            //let rt:RETURN_CODE = (self?.clearentVP3300.emv_startTransaction(amount, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true))!
+            let rt:RETURN_CODE = self!.clearentVP3300.device_startTransaction(0, amtOther: 0, type: 0, timeout: 60, tags: nil, forceOnline: false, fallback: true)
+            if RETURN_CODE_DO_SUCCESS == rt {
+                self?.contentViewModel.feedback.append(contentsOf: "Transaction Successfully Started")
+            } else {
+                print("Start Transaction info \(rt)")
+                self?.contentViewModel.feedback.append(contentsOf: "Transaction Failed to Start")
+            }
         }
     }
-    
 }

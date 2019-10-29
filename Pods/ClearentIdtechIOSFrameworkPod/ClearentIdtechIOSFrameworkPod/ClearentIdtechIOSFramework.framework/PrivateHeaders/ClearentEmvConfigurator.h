@@ -6,7 +6,7 @@
 //  Copyright © 2018 Clearent, L.L.C. All rights reserved.
 //
 #import <Foundation/Foundation.h>
-#import <IDTech/IDT_VP3300.h>
+#import "IDT_VP3300.h"
 #import "ClearentConfiguration.h"
 
 typedef enum{
@@ -19,7 +19,8 @@ typedef enum{
     NO_PAYLOAD,
     NO_MOBILE_DEVICE,
     CONTACT_FAILED,
-    CONTACT_CAPKS_FAILED
+    CONTACT_CAPKS_FAILED,
+    CONTACT_DEVICE_IS_DISCONNECTED
 }CONFIGURATION_ERROR_CODE;
 
 @interface ClearentEmvConfigurator : NSObject
@@ -27,6 +28,8 @@ typedef enum{
     @property (nonatomic) IDT_VP3300 *sharedController;
 
     - (id)initWithIdtechSharedController:(IDT_VP3300*) sharedController;
-    - (NSString*) configure:(ClearentConfiguration*) clearentConfiguration;
+    - (CONFIGURATION_ERROR_CODE) configureMajorTags;
+    - (CONFIGURATION_ERROR_CODE) configureContactAids:(NSDictionary*) contactAids;
+    - (CONFIGURATION_ERROR_CODE) configureContactCapks:(NSDictionary*) contactCapks;
 
 @end

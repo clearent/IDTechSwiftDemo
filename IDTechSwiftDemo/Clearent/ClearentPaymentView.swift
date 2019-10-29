@@ -153,7 +153,7 @@ struct ClearentPaymentView_Previews: PreviewProvider {
 final class ContentViewModel: ObservableObject {
     @Published var processing = false
     @Published var amount = "1.00"
-    @Published var deviceSerialNumber = "IDTECH-VP3300-03826"
+    @Published var deviceSerialNumber = "IDTECH-VP3300-92225"
     @Published var bluetoothConnected = false
     @Published var feedback = ""
 }

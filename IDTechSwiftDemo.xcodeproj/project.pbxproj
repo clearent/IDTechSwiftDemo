@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27D871610777F29E4278F09E /* Pods_IDTechSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F6FF2CDA02CF0395564528 /* Pods_IDTechSwiftDemo.framework */; };
+		077B97636478E450CF183F61 /* Pods_IDTechSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D00C18B2152DCEC879D5DF62 /* Pods_IDTechSwiftDemo.framework */; };
 		4BB3EB332360889700375579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB322360889700375579 /* AppDelegate.swift */; };
 		4BB3EB352360889700375579 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB342360889700375579 /* SceneDelegate.swift */; };
 		4BB3EB392360889900375579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3EB382360889900375579 /* Assets.xcassets */; };
@@ -36,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		226C34AA91E6E0CDB31184BB /* Pods-IDTechSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4BB3EB2F2360889700375579 /* IDTechSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IDTechSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB3EB322360889700375579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BB3EB342360889700375579 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,8 +50,9 @@
 		4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPaymentView.swift; sourceTree = "<group>"; };
 		4BB3EB6723612D9500375579 /* ClearentPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPayment.swift; sourceTree = "<group>"; };
 		4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentBluetoothScanner.swift; sourceTree = "<group>"; };
-		5B8BAF435FF49564CD09AF80 /* Pods-IDTechSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		E2F6FF2CDA02CF0395564528 /* Pods_IDTechSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDTechSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D50C09C6D1FAFE13C1BA290 /* Pods-IDTechSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A778255171068DE1C065367B /* Pods-IDTechSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D00C18B2152DCEC879D5DF62 /* Pods_IDTechSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDTechSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27D871610777F29E4278F09E /* Pods_IDTechSwiftDemo.framework in Frameworks */,
+				077B97636478E450CF183F61 /* Pods_IDTechSwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,14 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15695F5E563E0847C41695BE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E2F6FF2CDA02CF0395564528 /* Pods_IDTechSwiftDemo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4BB3EB262360889700375579 = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +89,7 @@
 				4BB3EB532360889900375579 /* IDTechSwiftDemoUITests */,
 				4BB3EB302360889700375579 /* Products */,
 				840EADD360CB5AB43AD0B791 /* Pods */,
-				15695F5E563E0847C41695BE /* Frameworks */,
+				D184889353AA901CA7C04E76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,10 +154,18 @@
 		840EADD360CB5AB43AD0B791 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5B8BAF435FF49564CD09AF80 /* Pods-IDTechSwiftDemo.debug.xcconfig */,
-				226C34AA91E6E0CDB31184BB /* Pods-IDTechSwiftDemo.release.xcconfig */,
+				A778255171068DE1C065367B /* Pods-IDTechSwiftDemo.debug.xcconfig */,
+				6D50C09C6D1FAFE13C1BA290 /* Pods-IDTechSwiftDemo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D184889353AA901CA7C04E76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D00C18B2152DCEC879D5DF62 /* Pods_IDTechSwiftDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB3EB592360889900375579 /* Build configuration list for PBXNativeTarget "IDTechSwiftDemo" */;
 			buildPhases = (
-				BBA10A1AC3F9857E6F9CF2B9 /* [CP] Check Pods Manifest.lock */,
+				4BB3B14F11725DD3BB0F2D18 /* [CP] Check Pods Manifest.lock */,
 				4BB3EB2B2360889700375579 /* Sources */,
 				4BB3EB2C2360889700375579 /* Frameworks */,
 				4BB3EB2D2360889700375579 /* Resources */,
-				12A0C631FBFC6144911BD5CD /* [CP] Embed Pods Frameworks */,
-				9359041BF6558109368E9141 /* [CP] Copy Pods Resources */,
+				AE9A2B6D0759695568523C7E /* [CP] Embed Pods Frameworks */,
+				5E250597034C6C19534BEC55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,41 +298,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		12A0C631FBFC6144911BD5CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9359041BF6558109368E9141 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BBA10A1AC3F9857E6F9CF2B9 /* [CP] Check Pods Manifest.lock */ = {
+		4BB3B14F11725DD3BB0F2D18 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,6 +318,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E250597034C6C19534BEC55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9A2B6D0759695568523C7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -526,7 +526,7 @@
 		};
 		4BB3EB5A2360889900375579 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B8BAF435FF49564CD09AF80 /* Pods-IDTechSwiftDemo.debug.xcconfig */;
+			baseConfigurationReference = A778255171068DE1C065367B /* Pods-IDTechSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,20 +534,21 @@
 				DEVELOPMENT_TEAM = PY4645385H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IDTechSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.clearent.IDTechSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		4BB3EB5B2360889900375579 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 226C34AA91E6E0CDB31184BB /* Pods-IDTechSwiftDemo.release.xcconfig */;
+			baseConfigurationReference = 6D50C09C6D1FAFE13C1BA290 /* Pods-IDTechSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,13 +556,14 @@
 				DEVELOPMENT_TEAM = PY4645385H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IDTechSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.clearent.IDTechSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

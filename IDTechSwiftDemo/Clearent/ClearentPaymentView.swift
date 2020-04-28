@@ -12,13 +12,11 @@ struct ClearentPaymentView: View {
     
     @ObservedObject var contentViewModel: ContentViewModel
     
-    private var clearentPayment:ClearentPayment!
-    private var clearentBluetoothScanner:ClearentBluetoothScanner!
+    private var clearentPay:ClearentPay!
     
     init(_ baseUrl: String, _ publicKey: String) {
         contentViewModel = ContentViewModel()
-        self.clearentPayment = ClearentPayment(contentViewModel: contentViewModel, baseUrl:baseUrl, publicKey:publicKey)
-        self.clearentBluetoothScanner = ClearentBluetoothScanner(lookForFriendlyName: contentViewModel.deviceSerialNumber, clearentPayment:self.clearentPayment)
+        self.clearentPay = ClearentPay(contentViewModel: contentViewModel, baseUrl:baseUrl, publicKey:publicKey)
     }
     
     var body: some View {
@@ -38,42 +36,15 @@ struct ClearentPaymentView: View {
             }
             
             HStack{
-                Text("Device Serial Number")
+                Text("Last 5 of Device Serial Number")
                         .fontWeight(.medium)
                 
-                TextField("Enter device serial number", text: $contentViewModel.deviceSerialNumber)
+                TextField("Enter last 5 device serial number", text: $contentViewModel.deviceSerialNumber)
                 .frame(width: 250.0, height: 50.0, alignment: .center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             }
-            
-            HStack{
-                Button(action:
-                    {
-                        self.startBluetoothScan()
-                        
-                }) {
-                    VStack{
-                        HStack {
-                            Text("Connect")
-                            .fontWeight(.bold)
-                            .font(.title)
-                            .padding()
-                            .background(connectButtonColor)
-                            .cornerRadius(40)
-                            .foregroundColor(.white)
-                            .padding(10)
-                        }
-                        Text("(Press button on reader)")
-                        .foregroundColor(.secondary)
-                        .font(.subheadline)
-                    }
-                }.disabled(contentViewModel.processing || contentViewModel.bluetoothConnected)
-                
-            }
-            
-            Spacer()
-            
+                   
             HStack{
                 if(contentViewModel.bluetoothConnected) {
                     Text("Connected")
@@ -85,61 +56,87 @@ struct ClearentPaymentView: View {
             
             Spacer()
             
+            VStack{
+                Text("(Press button on reader)")
+                .foregroundColor(pressButtonColor)
+                .font(.subheadline)
+                
             Button(action:
                 {
-                    self.contentViewModel.feedback = self.contentViewModel.feedback + "Processing\n"
+                    self.contentViewModel.feedbackDisplay = self.contentViewModel.feedbackDisplay + "Processing\n"
                     self.contentViewModel.processing = true
                     self.startTransaction()
                     
             }) {
-                HStack {
-                    Text("Pay")
-                    .fontWeight(.bold)
-                    .font(.title)
-                    .padding()
-                    .background(payButtonColor)
-                    .cornerRadius(40)
-                    .foregroundColor(.white)
-                    .padding(10)
-                }
-            }.disabled(contentViewModel.processing || !contentViewModel.bluetoothConnected)
             
+                HStack {
+                    Text("Start Pay")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding()
+                        .background(payButtonColor)
+                        .cornerRadius(40)
+                        .foregroundColor(.white)
+                        .padding(10)
+                }
+                
+            }.disabled(contentViewModel.processing)
+            
+
+            Button(action:
+                {
+                    self.contentViewModel.processing = false;
+                    self.cancelPay()
+                }) {
+                    HStack {
+                        Text("Cancel Pay")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding()
+                        .background(cancelButtonColor)
+                        .cornerRadius(40)
+                        .foregroundColor(.white)
+                        .padding(10)
+                    }
+                }
+            }
             Spacer()
+            
             List{
-                Text(contentViewModel.feedback).lineLimit(100).padding(20)
-//                TextField("Results", text: $contentViewModel.feedback)
-//                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-//                    .font(.largeTitle)
-//                    .foregroundColor(.white)
-//                    .background(Color.gray)
+                Text(contentViewModel.feedbackDisplay).lineLimit(100).padding(20)
             }
         }
     }
     
-    var connectButtonColor: Color {
-        if(contentViewModel.processing || contentViewModel.bluetoothConnected) {
-            return .gray
-        }
+    var cancelButtonColor: Color {
         return .blue
     }
    
     var payButtonColor: Color {
-           if(contentViewModel.processing || !contentViewModel.bluetoothConnected) {
+        if(contentViewModel.processing) {
                return .gray
            }
            return .blue
        }
     
-    func startBluetoothScan() {
-        self.clearentBluetoothScanner.scanForDevices();
-    }
+    
+    var pressButtonColor: Color {
+        if(contentViewModel.processing) {
+               return .gray
+           }
+           return .blue
+       }
+    
+        func cancelPay() {
+            clearentPay.cancelTransaction()
+        }
     
     public func notifyBluetoothDevice(friendlyName:String, uuid:UUID) {
-        self.clearentPayment.addBluetoothDevice(friendlyName: friendlyName, uuid: uuid)
+        self.clearentPay.addBluetoothDevice(friendlyName: friendlyName, uuid: uuid)
     }
 
     func startTransaction() {
-        clearentPayment.startTransaction()
+        clearentPay.startTransaction()
     }
 }
 
@@ -149,12 +146,11 @@ struct ClearentPaymentView_Previews: PreviewProvider {
     }
 }
 
-
 final class ContentViewModel: ObservableObject {
     @Published var processing = false
     @Published var amount = "1.00"
-    @Published var deviceSerialNumber = "IDTECH-VP3300-92225"
+    @Published var deviceSerialNumber = "54997"
     @Published var bluetoothConnected = false
-    @Published var feedback = ""
+    @Published var feedbackDisplay = ""
 }
 

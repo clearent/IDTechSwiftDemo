@@ -14,8 +14,7 @@
 		4BB3EB3C2360889900375579 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3EB3B2360889900375579 /* Preview Assets.xcassets */; };
 		4BB3EB3F2360889900375579 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB3EB3D2360889900375579 /* LaunchScreen.storyboard */; };
 		4BB3EB6323612A3F00375579 /* ClearentPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */; };
-		4BB3EB6823612D9500375579 /* ClearentPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB6723612D9500375579 /* ClearentPayment.swift */; };
-		4BD37E6623614DB800FF2803 /* ClearentBluetoothScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */; };
+		4BB3EB6823612D9500375579 /* ClearentPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB3EB6723612D9500375579 /* ClearentPay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +47,7 @@
 		4BB3EB502360889900375579 /* IDTechSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDTechSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB3EB562360889900375579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPaymentView.swift; sourceTree = "<group>"; };
-		4BB3EB6723612D9500375579 /* ClearentPayment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPayment.swift; sourceTree = "<group>"; };
-		4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentBluetoothScanner.swift; sourceTree = "<group>"; };
+		4BB3EB6723612D9500375579 /* ClearentPay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearentPay.swift; sourceTree = "<group>"; };
 		6D50C09C6D1FAFE13C1BA290 /* Pods-IDTechSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		A778255171068DE1C065367B /* Pods-IDTechSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDTechSwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D00C18B2152DCEC879D5DF62 /* Pods_IDTechSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDTechSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,8 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				4BB3EB6223612A3F00375579 /* ClearentPaymentView.swift */,
-				4BB3EB6723612D9500375579 /* ClearentPayment.swift */,
-				4BD37E6523614DB800FF2803 /* ClearentBluetoothScanner.swift */,
+				4BB3EB6723612D9500375579 /* ClearentPay.swift */,
 			);
 			path = Clearent;
 			sourceTree = "<group>";
@@ -363,8 +360,7 @@
 			files = (
 				4BB3EB332360889700375579 /* AppDelegate.swift in Sources */,
 				4BB3EB352360889700375579 /* SceneDelegate.swift in Sources */,
-				4BB3EB6823612D9500375579 /* ClearentPayment.swift in Sources */,
-				4BD37E6623614DB800FF2803 /* ClearentBluetoothScanner.swift in Sources */,
+				4BB3EB6823612D9500375579 /* ClearentPay.swift in Sources */,
 				4BB3EB6323612A3F00375579 /* ClearentPaymentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

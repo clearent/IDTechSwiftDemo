@@ -14,6 +14,8 @@
 #import "ClearentPaymentRequest.h"
 #import "ClearentVP3300Configuration.h"
 #import "IDT_VP3300.h"
+#import "ClearentResponse.h"
+#import "ClearentConnection.h"
 
 /**
  * Interact with this object as a singleton. Provide a delegate that adheres to the Clearent_Public_IDTech_VP3300_Delegate protocol will allow the framework to send messages to you.
@@ -23,20 +25,23 @@
 @interface Clearent_VP3300 : NSObject
 @property(nonatomic) SEL callBackSelector;
 
-/**
- * This is deprecated. Use initWithConfig instead
- */
-- (id) init : (id <Clearent_Public_IDTech_VP3300_Delegate>)publicDelegate clearentBaseUrl:(NSString*)clearentBaseUrl publicKey:(NSString*)publicKey;
+- (id) init : (id <Clearent_Public_IDTech_VP3300_Delegate>)publicDelegate clearentBaseUrl:(NSString*)clearentBaseUrl publicKey:(NSString*)publicKey
+__deprecated_msg("use initWithConnectionHandling method instead.");
 
 /**
  * Configuration includes capability to disable remote logging
  */
-- (id) initWithConfig : (id <Clearent_Public_IDTech_VP3300_Delegate>)publicDelegate clearentVP3300Configuration:(id <ClearentVP3300Configuration>) clearentVP3300Configuration;
+- (id) initWithConfig : (id <Clearent_Public_IDTech_VP3300_Delegate>)publicDelegate clearentVP3300Configuration:(id <ClearentVP3300Configuration>) clearentVP3300Configuration __deprecated_msg("use initWithConnectionHandling method instead.");
+
+/**
+ * Configuration includes ability to handle bluetooth and audio jack connections.
+ */
+- (id) initWithConnectionHandling : (id <Clearent_Public_IDTech_VP3300_Delegate>)publicDelegate clearentVP3300Configuration:(id <ClearentVP3300Configuration>) clearentVP3300Configuration;
 
 - (NSString*) SDK_version;
 
 /**
- *Close Device
+ *Close Device - closes all communication channels, disconnects devices, and destroys the current instance of the SharedController.
  */
 
 -(void) close;
@@ -1286,6 +1291,16 @@
  */
 -(RETURN_CODE) emv_startTransaction:(double)amount amtOther:(double)amtOther type:(int)type timeout:(int)timeout tags:(NSData*)tags forceOnline:(BOOL)forceOnline fallback:(BOOL)fallback;
 
+/**
+* Start EMV (dip and swipe interface only) Transaction Request 
+*
+@see emv_startTransaction for more details
+@param clearentPaymentRequest Transaction amount value  (tag value 9F02)
+
+* @return RETURN_CODE:  Values can be parsed with errorCode.getErrorString()
+
+*/
+-(RETURN_CODE) emv_startTransaction:(id<ClearentPaymentRequest>) clearentPaymentRequest;
 
 /**
  * Polls device for Serial Number
@@ -1477,6 +1492,17 @@
  */
 -(RETURN_CODE) device_startTransaction:(id<ClearentPaymentRequest>) clearentPaymentRequest;
 
+
+/**
+* Start A Transaction by passing in a payment request.
+*
+Works just like the deprecated device_startTransaction method except now you can provide a connection object instructing the framework to connect to a bluetooth device or an audio jack reader. This includes an optional email address that can be used in the event of an offline decline to send a receipt (an emv certification requirement).
+ 
+* @return ClearentResponse:  Contains details about starting transaction. Feedback will also be echoed back to user thru the feedback delegate method.
+
+*/
+-(ClearentResponse*) startTransaction:(id<ClearentPaymentRequest>) clearentPaymentRequest clearentConnection:(ClearentConnection*) clearentConnection;
+
 /**
  The reader has a contactless configuration applied each time connects. After a successful configuration the device serial number and a flag denoting the reader was configured for contactless is stored using NSUserDefaults. If there is a need to clear out this information, maybe to support a configuration change/future updates, call this method to clear out the cache.
  */
@@ -1501,18 +1527,85 @@ Filter out all service ids except for 1820, which is what IDTech readers use.
 - (void) setServiceScanFilterWithService1820;
 
 /**
- * Search by  BLE Friendly Name - This is a convenience method created by Clearent to wrap Idtech's bluetooth scan functionality ito address a common scenario. If
- * you  know the friendly name you can send it to the framework using this method and we will attempt to connect to the reader. Errors should be communicated in the deviceMessage callback
- * and a success would communicate back using the isReady method.
- *
- * The format of an IDTECH friendly name for a VP3300 is IDTECH-VP3300-nnnnn, where the nnnnn is the last 5 digits of the device serial number printed on the back of the reader (and on the box it shipped in).
- * If you cannot read the number a QR code is provided.
- *
- * @param friendlyName  The friendly name to be used when discovering any BLE devices
- *
- */
--(void) startBluetoothScan:(NSString*)friendlyName;
+If you did not instruct the framework to do any configuration when you initialized the vp3300 object, you can use the set methods to pick which configuration you want applied, then call this method to apply the configuration. The emv/contact configuration usually takes up to a minute and the contactless takes about 45 seconds.
+    */
 
+-(void) applyClearentConfiguration;
+
+
+/**
+ Inspects the reader configuration to determine if contactless configuration has been applied. Must be connected to reader.
+ If you get RETURN_CODE_DO_SUCCESS back then contactless has been configured. RETURN_CODE_ERR_DISCONNECT means the reader is not connected. RETURN_CODE_NO_DATA_AVAILABLE_ is returned when not configured
+ */
+-(RETURN_CODE) isContactlessConfigured;
+
+/**
+ Inspects the reader configuration to determine if the reader has been preconfigured. Must be connected to reader.
+ If you get RETURN_CODE_DO_SUCCESS back then reader has been preconfigured. RETURN_CODE_ERR_DISCONNECT means the reader is not connected. RETURN_CODE_NO_DATA_AVAILABLE_ is returned when not configured
+ */
+-(RETURN_CODE) isReaderPreconfigured;
+
+/**
+ Contactless Event
+ During a Contactless transaction, if events are enabled, they will be sent to this protocol,
+ 
+ @param event Event Type:
+ - 01 = LED Event
+ - 02 = Buzzer Event
+ - 03 = LCD Message
+ @param scheme LCD Message Scheme
+ @param data Data
+    - When Event Type 01:
+    -- 0x00 = LED0 off
+    -- 0x10 = LED1 off
+     -- 0x20 = LED2 off
+     -- 0x30 = LED3 off
+     -- 0xF0 = ALL off
+    -- 0x01 = LED0 on
+    -- 0x11 = LED1 on
+     -- 0x21 = LED2 on
+     -- 0x31 = LED3 on
+     -- 0xF1 = ALL on
+     - When Event Type 02:
+     -- 0x10 = Short Beep No Change
+     -- 0x11 = Short Beep No Change
+     -- 0x12 = Double Short Beep
+     -- 0x13 = Triple Short Beep
+     -- 0x20 = 200ms Beep
+     -- 0x21 = 400ms Beep
+     -- 0x22 = 600ms Beep
+     - When Event Type 03:
+     -- Message ID (please refer to table in NEO Reference Guide)
+ */
+
+//- (void) ctlsEvent:(Byte)event scheme:(Byte)scheme  data:(Byte)data;
+
+
+//- (void) gen2Data:(NSData*)tlv;//!<Receives Gen2 TLV data.
+//!< @param tlv TLV data from gen2 event
+
+/**
+ * The Clearent solution includes remote logging to aid in support calls. If you want to contribute to these logs pass us
+ * some identification, preferably the name and version of your solution, and a brief log message.
+ */
+- (void) addRemoteLogRequest:(NSString*) clientSoftwareVersion message:(NSString*) message;
+
+
+/**
+* This method is most useful when its called internally from the startPayment method. But, if there is a reason to attempt a connection prior to running the card you can use this method.
+* One reason might be to get back a list of bluetooth devices (from the public delegate) so you can present a list of devices to the user.
+*/
+-(void) startConnection:(ClearentConnection*) clearentConnection;
+
+//- (void) adjustBluetoothAdvertisingInterval;
+
+
+
+/**
+ * When using the startTransaction method that allows you to pass in a ClearentConnection, the framework will save off the bluetooth device id of the last device it connected with. With each subsequent call to the startTransaction
+ * the framework is aware the connection request could change and will clear out the stored bluetooth device id when appropriate. But, in case it does not, here is a method you can use to clear it out.
+ */
+- (void) clearBluetoothDeviceCache;
 
 @end
 

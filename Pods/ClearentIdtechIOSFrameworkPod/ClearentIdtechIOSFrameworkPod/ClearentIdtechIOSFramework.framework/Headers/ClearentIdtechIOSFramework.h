@@ -16,6 +16,12 @@
 #import "ClearentVP3300Configuration.h"
 #import "ClearentVP3300Config.h"
 #import "ClearentPayment.h"
+#import "ClearentResponse.h"
+#import "ClearentConnection.h"
+#import "ClearentTransactionToken.h"
+#import "ClearentFeedback.h"
+#import "ClearentBluetoothDevice.h"
+#import "ClearentDeviceConnector.h"
 
 #import "IDT_VP3300.h"
 #import "IDTCommon.h"

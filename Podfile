@@ -6,6 +6,6 @@ target 'IDTechSwiftDemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'ClearentIdtechIOSFrameworkPod', '1.0.94'
+  pod 'ClearentIdtechIOSFrameworkPod', '2.0.4'
 
 end

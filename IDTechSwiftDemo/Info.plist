@@ -23,7 +23,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Need it</string>
+	<string>Using bluetooth</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Need Bluetooth Please</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>New apple requirement</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

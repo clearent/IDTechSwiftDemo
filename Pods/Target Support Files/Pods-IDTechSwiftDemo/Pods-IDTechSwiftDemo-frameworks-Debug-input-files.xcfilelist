@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-IDTechSwiftDemo/Pods-IDTechSwiftDemo-frameworks.sh
 ${PODS_ROOT}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework
+${PODS_ROOT}/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework.dSYM

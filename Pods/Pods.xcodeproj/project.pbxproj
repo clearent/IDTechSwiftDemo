@@ -20,7 +20,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		60ECA9A07A3B42D88E509CBC5A75390F /* IDTech.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4FD1F92B2024D852F68D22592653C0ED /* IDTech.bundle */; };
+		60ECA9A07A3B42D88E509CBC5A75390F /* IDTech.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4F59EF516D8EA83D0360A592E296C035 /* IDTech.bundle */; };
 		8FCB1BFEED41C38C174C2EE375CC3292 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B11DE6E7333495EF3C489580A4DD47BB /* Pods-IDTechSwiftDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C55769D9D306448AE933A436DC21EE /* Pods-IDTechSwiftDemo-dummy.m */; };
 		D3CF765635C5E0384460C2D8F15142A7 /* Pods-IDTechSwiftDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E3C508A3BBB2954319E234FEA07E66E /* Pods-IDTechSwiftDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,40 +44,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DFE11C21FBD3DA1541F2B388D702115 /* ClearentConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentConnection.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentConnection.h; sourceTree = "<group>"; };
 		0E3C508A3BBB2954319E234FEA07E66E /* Pods-IDTechSwiftDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IDTechSwiftDemo-umbrella.h"; sourceTree = "<group>"; };
 		1122E21B94BB9EDFC221D6F2D1489FBA /* Pods-IDTechSwiftDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IDTechSwiftDemo-Info.plist"; sourceTree = "<group>"; };
-		12AA8DFDC6DF31ADC9803909E3897F84 /* ClearentConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentConnection.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentConnection.h; sourceTree = "<group>"; };
+		1FC4D762C9B408749E7652FDF21A9C91 /* ClearentIdtechIOSFrameworkPod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClearentIdtechIOSFrameworkPod.xcconfig; sourceTree = "<group>"; };
+		2C8F04A06E765C0F64C6BA37FF123035 /* ClearentVP3300Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentVP3300Configuration.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentVP3300Configuration.h; sourceTree = "<group>"; };
+		30D2F4595293589E97A57C013F0E79BF /* ClearentManualEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentManualEntry.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentManualEntry.h; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3652955C5CB5A6266524DB748B5790F2 /* Pods-IDTechSwiftDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IDTechSwiftDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		390684A4B671D53583135427508195CA /* ClearentCard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentCard.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentCard.h; sourceTree = "<group>"; };
-		3DCF3917A612F1546A2B21E86633A51C /* ClearentIdtechIOSFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ClearentIdtechIOSFramework.framework; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework; sourceTree = "<group>"; };
-		4102773765D69EA47CC8B4E3DCED67AA /* ClearentManualEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentManualEntry.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentManualEntry.h; sourceTree = "<group>"; };
+		3E43C76CFDB651BEB45CC43928959085 /* ClearentPaymentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentPaymentRequest.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentPaymentRequest.h; sourceTree = "<group>"; };
+		3FB6A396F7912D21D624788F81F23409 /* ClearentDeviceConnector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentDeviceConnector.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentDeviceConnector.h; sourceTree = "<group>"; };
 		45AB0B0F859EFE5FF556436BBA1D9573 /* Pods-IDTechSwiftDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IDTechSwiftDemo-resources.sh"; sourceTree = "<group>"; };
-		4FD1F92B2024D852F68D22592653C0ED /* IDTech.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IDTech.bundle; path = ClearentIdtechIOSFrameworkPod/IDTech.bundle; sourceTree = "<group>"; };
-		5C2C5C4A2A7C1A948DC4CA92AB4620A7 /* ClearentBluetoothDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentBluetoothDevice.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentBluetoothDevice.h; sourceTree = "<group>"; };
-		601518530EC34A40188D546FC85F415D /* ClearentTransactionToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentTransactionToken.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentTransactionToken.h; sourceTree = "<group>"; };
-		617BE8B73895E7B49939849738F89CE0 /* ClearentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentResponse.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentResponse.h; sourceTree = "<group>"; };
+		46CB42018A7CCDD83E0EF99F5AFB371B /* IDTech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDTech.framework; path = ClearentIdtechIOSFrameworkPod/IDTech.framework; sourceTree = "<group>"; };
+		49BE029F130F9BBF1FDCAD3FFFC36A08 /* ClearentPublicVP3300Delegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentPublicVP3300Delegate.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentPublicVP3300Delegate.h; sourceTree = "<group>"; };
+		4DE74B03236DDB5895F9CFFC4D52CA68 /* ClearentFeedback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentFeedback.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentFeedback.h; sourceTree = "<group>"; };
+		4F59EF516D8EA83D0360A592E296C035 /* IDTech.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IDTech.bundle; path = ClearentIdtechIOSFrameworkPod/IDTech.bundle; sourceTree = "<group>"; };
+		5C643695489825F445213EFB7630AEA8 /* ResourceBundle-ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod-Info.plist"; sourceTree = "<group>"; };
 		619E390F42F11EE864D935CDEB4F049D /* Pods-IDTechSwiftDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IDTechSwiftDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		627425225BAFF9EB2049FA5069EE595E /* Clearent_VP3300.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Clearent_VP3300.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/Clearent_VP3300.h; sourceTree = "<group>"; };
 		75BF0AFDE1A910C682F709536FDA6D20 /* Pods-IDTechSwiftDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IDTechSwiftDemo.modulemap"; sourceTree = "<group>"; };
-		7F9791495AC2E694AE6F4CB3E8C45412 /* ClearentPaymentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentPaymentRequest.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentPaymentRequest.h; sourceTree = "<group>"; };
-		843FF82F8F7E7F416B4CC7B46B436E9C /* ClearentManualEntryDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentManualEntryDelegate.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentManualEntryDelegate.h; sourceTree = "<group>"; };
+		77B1DC308F528D6A5A28C0B872AE6EBF /* ClearentManualEntryDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentManualEntryDelegate.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentManualEntryDelegate.h; sourceTree = "<group>"; };
+		91012DADFF5C25B3AE7D822ADFDD0FAD /* ClearentBluetoothDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentBluetoothDevice.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentBluetoothDevice.h; sourceTree = "<group>"; };
+		92CC0DEF4C081F414CB6339482486626 /* ClearentIdtechIOSFramework.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentIdtechIOSFramework.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentIdtechIOSFramework.h; sourceTree = "<group>"; };
 		93DCD81478616F9F18E4FE6C4E234D27 /* Pods-IDTechSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IDTechSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
-		949E5333E419C99DA7A1FDFDDAA49BFB /* IDTech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDTech.framework; path = ClearentIdtechIOSFrameworkPod/IDTech.framework; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A12FD59718D25AD8D70BCB9538CB5524 /* Pods_IDTechSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IDTechSwiftDemo.framework; path = "Pods-IDTechSwiftDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA88B669EE6637542E78B63D1094037A /* Pods-IDTechSwiftDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IDTechSwiftDemo-frameworks.sh"; sourceTree = "<group>"; };
+		AF437C1F15FA5DDC29CB4ADA137B5E75 /* ClearentResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentResponse.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentResponse.h; sourceTree = "<group>"; };
 		B02652C4D596D7AAD800777A78191CE4 /* ClearentIdtechIOSFrameworkPod.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ClearentIdtechIOSFrameworkPod.bundle; path = "ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4AE35444AC16BA17E94678560844532 /* ClearentVP3300Config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentVP3300Config.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentVP3300Config.h; sourceTree = "<group>"; };
-		BA661679F8F820232274C6A7F427A425 /* ClearentPublicVP3300Delegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentPublicVP3300Delegate.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentPublicVP3300Delegate.h; sourceTree = "<group>"; };
-		BF4852C230AF29405B7FE72083635C9F /* ClearentIdtechIOSFramework.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentIdtechIOSFramework.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentIdtechIOSFramework.h; sourceTree = "<group>"; };
-		C2E3F3D37CE9B4E00F0E6B42720E2239 /* Clearent_VP3300.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Clearent_VP3300.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/Clearent_VP3300.h; sourceTree = "<group>"; };
-		C640C16234C52A6A8513C1EF91CCF851 /* ClearentIdtechIOSFrameworkPod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ClearentIdtechIOSFrameworkPod.xcconfig; sourceTree = "<group>"; };
+		B391A5BC8035F26324BD39B4EEFE63F6 /* ClearentTransactionToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentTransactionToken.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentTransactionToken.h; sourceTree = "<group>"; };
+		BE71B442E1FFD2C8ECBDBC843446B5CA /* ClearentPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentPayment.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentPayment.h; sourceTree = "<group>"; };
 		C86FADAEF4E29801C151B4C5B37B3085 /* Pods-IDTechSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IDTechSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		D03D84D601C973B1F0926955FD2EC953 /* ClearentFeedback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentFeedback.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentFeedback.h; sourceTree = "<group>"; };
 		D4C55769D9D306448AE933A436DC21EE /* Pods-IDTechSwiftDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IDTechSwiftDemo-dummy.m"; sourceTree = "<group>"; };
-		E31088756A96591D86A3B6D7D88CC57D /* ClearentPayment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentPayment.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentPayment.h; sourceTree = "<group>"; };
-		EF10A680BA66B560C99FB26B4BB370D4 /* ResourceBundle-ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod-Info.plist"; sourceTree = "<group>"; };
-		F1B1B2CEF44B02AD6639723762C5AB9A /* ClearentVP3300Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentVP3300Configuration.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentVP3300Configuration.h; sourceTree = "<group>"; };
+		D79869A68AB47EDA5C5DC71DF6AD365B /* ClearentCard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentCard.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentCard.h; sourceTree = "<group>"; };
+		EB4EE128C2859BE3E515FABAADC3602A /* ClearentVP3300Config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ClearentVP3300Config.h; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework/Headers/ClearentVP3300Config.h; sourceTree = "<group>"; };
+		EC67A6B0542E3C3EE6D5F299A1CF0D09 /* ClearentIdtechIOSFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ClearentIdtechIOSFramework.framework; path = ClearentIdtechIOSFrameworkPod/ClearentIdtechIOSFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E4C655F2B3E4E723D3DBF71ADB264F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC67A6B0542E3C3EE6D5F299A1CF0D09 /* ClearentIdtechIOSFramework.framework */,
+				46CB42018A7CCDD83E0EF99F5AFB371B /* IDTech.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6BBA9D2FA2EC984D9E0E03B4661B2CD0 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +117,47 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		87378A8D3D795FCEFAB27AD0A6E56E18 /* Resources */ = {
+		7CE8EEF149AA3A0F83E18CDE112301FA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4FD1F92B2024D852F68D22592653C0ED /* IDTech.bundle */,
+				84D7A72018476944C811E62F6E47968E /* ClearentIdtechIOSFrameworkPod */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7EBBBC7487FB38AE730E1D3D4F3BCF90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F59EF516D8EA83D0360A592E296C035 /* IDTech.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		84D7A72018476944C811E62F6E47968E /* ClearentIdtechIOSFrameworkPod */ = {
+			isa = PBXGroup;
+			children = (
+				627425225BAFF9EB2049FA5069EE595E /* Clearent_VP3300.h */,
+				91012DADFF5C25B3AE7D822ADFDD0FAD /* ClearentBluetoothDevice.h */,
+				D79869A68AB47EDA5C5DC71DF6AD365B /* ClearentCard.h */,
+				0DFE11C21FBD3DA1541F2B388D702115 /* ClearentConnection.h */,
+				3FB6A396F7912D21D624788F81F23409 /* ClearentDeviceConnector.h */,
+				4DE74B03236DDB5895F9CFFC4D52CA68 /* ClearentFeedback.h */,
+				92CC0DEF4C081F414CB6339482486626 /* ClearentIdtechIOSFramework.h */,
+				30D2F4595293589E97A57C013F0E79BF /* ClearentManualEntry.h */,
+				77B1DC308F528D6A5A28C0B872AE6EBF /* ClearentManualEntryDelegate.h */,
+				BE71B442E1FFD2C8ECBDBC843446B5CA /* ClearentPayment.h */,
+				3E43C76CFDB651BEB45CC43928959085 /* ClearentPaymentRequest.h */,
+				49BE029F130F9BBF1FDCAD3FFFC36A08 /* ClearentPublicVP3300Delegate.h */,
+				AF437C1F15FA5DDC29CB4ADA137B5E75 /* ClearentResponse.h */,
+				B391A5BC8035F26324BD39B4EEFE63F6 /* ClearentTransactionToken.h */,
+				EB4EE128C2859BE3E515FABAADC3602A /* ClearentVP3300Config.h */,
+				2C8F04A06E765C0F64C6BA37FF123035 /* ClearentVP3300Configuration.h */,
+				0E4C655F2B3E4E723D3DBF71ADB264F4 /* Frameworks */,
+				7EBBBC7487FB38AE730E1D3D4F3BCF90 /* Resources */,
+				CC2D5F43E91F203FD9711FE9B081CFCD /* Support Files */,
+			);
+			name = ClearentIdtechIOSFrameworkPod;
+			path = ClearentIdtechIOSFrameworkPod;
 			sourceTree = "<group>";
 		};
 		A4C83EC78C3C0ADB9598BCD8D9704BEC /* Pods-IDTechSwiftDemo */ = {
@@ -133,50 +178,6 @@
 			path = "Target Support Files/Pods-IDTechSwiftDemo";
 			sourceTree = "<group>";
 		};
-		A7A725471053BDF1F73D185C4B20E728 /* ClearentIdtechIOSFrameworkPod */ = {
-			isa = PBXGroup;
-			children = (
-				C2E3F3D37CE9B4E00F0E6B42720E2239 /* Clearent_VP3300.h */,
-				5C2C5C4A2A7C1A948DC4CA92AB4620A7 /* ClearentBluetoothDevice.h */,
-				390684A4B671D53583135427508195CA /* ClearentCard.h */,
-				12AA8DFDC6DF31ADC9803909E3897F84 /* ClearentConnection.h */,
-				D03D84D601C973B1F0926955FD2EC953 /* ClearentFeedback.h */,
-				BF4852C230AF29405B7FE72083635C9F /* ClearentIdtechIOSFramework.h */,
-				4102773765D69EA47CC8B4E3DCED67AA /* ClearentManualEntry.h */,
-				843FF82F8F7E7F416B4CC7B46B436E9C /* ClearentManualEntryDelegate.h */,
-				E31088756A96591D86A3B6D7D88CC57D /* ClearentPayment.h */,
-				7F9791495AC2E694AE6F4CB3E8C45412 /* ClearentPaymentRequest.h */,
-				BA661679F8F820232274C6A7F427A425 /* ClearentPublicVP3300Delegate.h */,
-				617BE8B73895E7B49939849738F89CE0 /* ClearentResponse.h */,
-				601518530EC34A40188D546FC85F415D /* ClearentTransactionToken.h */,
-				B4AE35444AC16BA17E94678560844532 /* ClearentVP3300Config.h */,
-				F1B1B2CEF44B02AD6639723762C5AB9A /* ClearentVP3300Configuration.h */,
-				CDDF6B1A45ADF3A49CAD3A466926C44E /* Frameworks */,
-				87378A8D3D795FCEFAB27AD0A6E56E18 /* Resources */,
-				B8224FA06A18F18C2783F147876FBBB8 /* Support Files */,
-			);
-			name = ClearentIdtechIOSFrameworkPod;
-			path = ClearentIdtechIOSFrameworkPod;
-			sourceTree = "<group>";
-		};
-		B8224FA06A18F18C2783F147876FBBB8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C640C16234C52A6A8513C1EF91CCF851 /* ClearentIdtechIOSFrameworkPod.xcconfig */,
-				EF10A680BA66B560C99FB26B4BB370D4 /* ResourceBundle-ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ClearentIdtechIOSFrameworkPod";
-			sourceTree = "<group>";
-		};
-		BC2909FEB574A5B142DDFB5533267E83 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A7A725471053BDF1F73D185C4B20E728 /* ClearentIdtechIOSFrameworkPod */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		BED4738FB37445C3EF8D5B0D9CFE081C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,13 +195,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CDDF6B1A45ADF3A49CAD3A466926C44E /* Frameworks */ = {
+		CC2D5F43E91F203FD9711FE9B081CFCD /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DCF3917A612F1546A2B21E86633A51C /* ClearentIdtechIOSFramework.framework */,
-				949E5333E419C99DA7A1FDFDDAA49BFB /* IDTech.framework */,
+				1FC4D762C9B408749E7652FDF21A9C91 /* ClearentIdtechIOSFrameworkPod.xcconfig */,
+				5C643695489825F445213EFB7630AEA8 /* ResourceBundle-ClearentIdtechIOSFrameworkPod-ClearentIdtechIOSFrameworkPod-Info.plist */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/ClearentIdtechIOSFrameworkPod";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -208,7 +210,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				BC2909FEB574A5B142DDFB5533267E83 /* Pods */,
+				7CE8EEF149AA3A0F83E18CDE112301FA /* Pods */,
 				BED4738FB37445C3EF8D5B0D9CFE081C /* Products */,
 				6BBA9D2FA2EC984D9E0E03B4661B2CD0 /* Targets Support Files */,
 			);
@@ -454,7 +456,7 @@
 		};
 		35DF4911C05523341C505F2058B393C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640C16234C52A6A8513C1EF91CCF851 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
+			baseConfigurationReference = 1FC4D762C9B408749E7652FDF21A9C91 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -471,7 +473,7 @@
 		};
 		457AC40BF28A2331ADAF94AEA55EEF7A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640C16234C52A6A8513C1EF91CCF851 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
+			baseConfigurationReference = 1FC4D762C9B408749E7652FDF21A9C91 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ClearentIdtechIOSFrameworkPod";
@@ -488,7 +490,7 @@
 		};
 		58FDB922465BAD5982C4B12B87AB1138 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640C16234C52A6A8513C1EF91CCF851 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
+			baseConfigurationReference = 1FC4D762C9B408749E7652FDF21A9C91 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -504,7 +506,7 @@
 		};
 		82B8AA1339DB0384C976D5E8CB7A6B29 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C640C16234C52A6A8513C1EF91CCF851 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
+			baseConfigurationReference = 1FC4D762C9B408749E7652FDF21A9C91 /* ClearentIdtechIOSFrameworkPod.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ClearentIdtechIOSFrameworkPod";
